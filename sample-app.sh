@@ -7,6 +7,7 @@ if [ ! -d "tempdir/templates" ]; then
     mkdir tempdir/templates
 if [ ! -d "tempdir/static" ]; then
   mkdir tempdir/static
+
 # mkdir tempdir
 # mkdir tempdir/templates
 # mkdir tempdir/static
@@ -28,4 +29,5 @@ _EOF_
 cd tempdir || exit
 docker build -t sampleapp .
 docker run -t -d -p 5050:5050 --name samplerunning sampleapp
+
 docker ps -a 
